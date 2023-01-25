@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      const source = new EventSource('http://localhost:3000/stream');
+
+      source.onmessage = (event) => {
+        const data = JSON.parse(event.data);
+        console.log(data);
+        // do something with the data, such as updating the UI
+      };
+    </script>
+  </head>
+  <body>
+    <!-- UI elements here -->
+  </body>
+</html>
